@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>مدارات التشييد | Madarat Al Tashyeed</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./Styles/style.css">
+</head>
+<body>
+
+<!-- ===================== LOADING SCREEN ===================== -->
+<div class="loading-screen" id="loadingScreen">
+  <div class="loading-logo">
+    <div class="brand-icon big"><i class="fas fa-drafting-compass"></i></div>
+    <div class="loading-text">مدارات التشييد</div>
+    <div class="loading-bar"><div class="loading-fill" id="loadingFill"></div></div>
+  </div>
+</div>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+      <div class="brand-icon"><img src="./Styles/Photos/logo.jpeg" alt="Logo" class="fas fa-drafting-compass"></img></div>
+      <div class="brand-text">
+        <span class="brand-ar">مدارات التشييد</span>
+        <span class="brand-en">Madarat Al Tashyeed</span>
+      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="toggler-icon"><i class="fas fa-bars"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav me-auto gap-1">
+        <li class="nav-item"><a class="nav-link" href="#home">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">من نحن</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">خدماتنا</a></li>
+        <li class="nav-item"><a class="nav-link" href="#why-us">لماذا نحن</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">أعمالنا</a></li>
+        <li class="nav-item"><a class="nav-link" href="#blog">المقالات</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials">آراء العملاء</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">تواصل معنا</a></li>
+      </ul>
+      <a href="https://wa.me/966500000000" class="btn btn-wa-nav" target="_blank">
+        <i class="fab fa-whatsapp"></i> واتساب
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section id="home" class="hero-section">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-particles" id="particles"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <div class="row align-items-center min-vh-100">
+      <div class="col-lg-7" data-aos="fade-right">
+        <div class="hero-badge mb-3">
+          <i class="fas fa-shield-alt"></i>
+          <span>خبرة أكثر من 15 عاماً في العزل والتسربات</span>
+        </div>
+        <h1 class="hero-title">
+          حلول متكاملة<br>
+          <span class="highlight-text">للعزل</span> ومعالجة<br>
+          <span class="highlight-stroke">التسربات</span>
+        </h1>
+        <p class="hero-desc">
+          نحن متخصصون في العزل المائي، كشف ومعالجة التسربات، أعمال الإيبوكسي والصيانة المتكاملة. 
+          جودة عالية – تنفيذ دقيق – ضمان معتمد.
+        </p>
+        <div class="hero-btns d-flex flex-wrap gap-3 mt-4">
+          <a href="#contact" class="btn btn-primary-custom">
+            <i class="fas fa-phone-alt"></i> احصل على استشارة مجانية
+          </a>
+          <a href="#services" class="btn btn-outline-custom">
+            <i class="fas fa-layer-group"></i> خدماتنا
+          </a>
+        </div>
+        <div class="hero-trust mt-5 d-flex flex-wrap gap-4">
+          <div class="trust-item">
+            <i class="fas fa-check-circle"></i>
+            <span>ضمان على الأعمال</span>
+          </div>
+          <div class="trust-item">
+            <i class="fas fa-check-circle"></i>
+            <span>فريق متخصص مدرب</span>
+          </div>
+          <div class="trust-item">
+            <i class="fas fa-check-circle"></i>
+            <span>أحدث التقنيات</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 d-none d-lg-flex justify-content-center" data-aos="fade-left">
+        <div class="hero-visual">
+          <div class="hero-card-float card-1">
+            <i class="fas fa-water"></i>
+            <span>عزل مائي</span>
+          </div>
+          <div class="hero-card-float card-2">
+            <i class="fas fa-search"></i>
+            <span>كشف تسربات</span>
+          </div>
+          <div class="hero-card-float card-3">
+            <i class="fas fa-tools"></i>
+            <span>صيانة دورية</span>
+          </div>
+          <div class="hero-circle-main">
+            <div class="circle-ring ring-1"></div>
+            <div class="circle-ring ring-2"></div>
+            <div class="circle-ring ring-3"></div>
+            <div class="circle-center">
+              <i class="fas fa-drafting-compass"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll-indicator">
+    <div class="scroll-line"></div>
+    <span>اكتشف المزيد</span>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="about-section section-pad">
+  <div class="section-bg-pattern"></div>
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="about-visual-wrap">
+          <div class="about-img-main">
+            <div class="about-img-placeholder">
+            <img src="./Styles/Photos/logo.jpeg" alt="مدارات التشييد" >
+              <span>صورة المشروع</span>
+            </div>
+          </div>
+          <div class="about-badge-float">
+            <div class="badge-num">+15</div>
+            <div class="badge-label">سنة خبرة</div>
+          </div>
+          <div class="about-img-secondary">
+            <div class="about-img-placeholder-sm">
+              <i class="fas fa-hard-hat"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="section-label">
+          <span class="label-line"></span><span>من نحن</span>
+        </div>
+        <h2 class="section-title">شركة رائدة في <br><span>العزل والتسربات</span></h2>
+        <p class="section-desc">
+          مدارات التشييد شركة متخصصة ذات خبرة واسعة في مجال العزل المائي وكشف ومعالجة التسربات وأعمال الإيبوكسي والصيانة المتكاملة. نعمل مع ملاك الفلل والمباني، الشركات والمقاولين، وإدارات العقارات لتقديم حلول مستدامة وعالية الجودة.
+        </p>
+        <div class="about-features">
+          <div class="about-feat-item">
+            <div class="feat-icon"><i class="fas fa-eye"></i></div>
+            <div>
+              <h5>رؤيتنا</h5>
+              <p>أن نكون المرجع الأول في حلول العزل والتسربات بأعلى معايير الجودة والاحترافية.</p>
+            </div>
+          </div>
+          <div class="about-feat-item">
+            <div class="feat-icon"><i class="fas fa-rocket"></i></div>
+            <div>
+              <h5>رسالتنا</h5>
+              <p>تقديم حلول متكاملة تحمي المنشآت وتضمن سلامتها بتقنيات حديثة وفريق متخصص.</p>
+            </div>
+          </div>
+          <div class="about-feat-item">
+            <div class="feat-icon"><i class="fas fa-award"></i></div>
+            <div>
+              <h5>قيمنا</h5>
+              <p>الجودة، الأمانة، الدقة في التنفيذ، والالتزام بالمواعيد مع ضمان رضا العملاء.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section id="services" class="services-section section-pad">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="section-label justify-content-center">
+        <span class="label-line"></span><span>خدماتنا</span><span class="label-line"></span>
+      </div>
+      <h2 class="section-title">ماذا <span>نقدم</span> لك؟</h2>
+      <p class="section-subtitle">حلول متخصصة لكل احتياجات العزل والصيانة</p>
+    </div>
+    <div class="row g-4">
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-card" data-service="1">
+          <div class="service-icon-wrap">
+            <div class="service-icon"><i class="fas fa-water"></i></div>
+            <div class="service-icon-bg"></div>
+          </div>
+          <div class="service-num">01</div>
+          <h4>العزل المائي</h4>
+          <p>نقدم حلول عزل مائي متكاملة للأسطح، الخزانات، الحمامات والأساسات باستخدام أفضل المواد والتقنيات الحديثة لضمان حماية دائمة من التسرب والرطوبة.</p>
+          <div class="service-tags">
+            <span>أسطح</span><span>خزانات</span><span>أساسات</span>
+          </div>
+          <a href="#contact" class="service-link">اطلب الخدمة <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-card featured" data-service="2">
+          <div class="featured-badge">الأكثر طلباً</div>
+          <div class="service-icon-wrap">
+            <div class="service-icon"><i class="fas fa-search-location"></i></div>
+            <div class="service-icon-bg"></div>
+          </div>
+          <div class="service-num">02</div>
+          <h4>كشف التسربات</h4>
+          <p>باستخدام أجهزة الكشف الحراري وتقنيات التصوير المتقدمة، نحدد موقع التسرب بدقة عالية دون الحاجة لتكسير أو أضرار في المبنى.</p>
+          <div class="service-tags">
+            <span>كشف حراري</span><span>بدون تكسير</span><span>دقة عالية</span>
+          </div>
+          <a href="#contact" class="service-link">اطلب الخدمة <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-card" data-service="3">
+          <div class="service-icon-wrap">
+            <div class="service-icon"><i class="fas fa-wrench"></i></div>
+            <div class="service-icon-bg"></div>
+          </div>
+          <div class="service-num">03</div>
+          <h4>معالجة التسربات</h4>
+          <p>نعالج التسربات بشكل جذري ودائم باستخدام مواد حقن متخصصة وتقنيات حديثة تضمن إيقاف التسرب نهائياً وعدم تكراره.</p>
+          <div class="service-tags">
+            <span>حقن كيميائي</span><span>علاج جذري</span><span>ضمان</span>
+          </div>
+          <a href="#contact" class="service-link">اطلب الخدمة <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-card" data-service="4">
+          <div class="service-icon-wrap">
+            <div class="service-icon"><i class="fas fa-tools"></i></div>
+            <div class="service-icon-bg"></div>
+          </div>
+          <div class="service-num">04</div>
+          <h4>الصيانة المتكاملة</h4>
+          <p>نقدم خدمات الصيانة الدورية والوقائية للمباني والمنشآت للحفاظ على سلامتها وإطالة عمرها الافتراضي وتجنب الأعطال المفاجئة.</p>
+          <div class="service-tags">
+            <span>صيانة دورية</span><span>وقائية</span><span>طوارئ</span>
+          </div>
+          <a href="#contact" class="service-link">اطلب الخدمة <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-card" data-service="5">
+          <div class="service-icon-wrap">
+            <div class="service-icon"><i class="fas fa-layer-group"></i></div>
+            <div class="service-icon-bg"></div>
+          </div>
+          <div class="service-num">05</div>
+          <h4>أعمال الإيبوكسي</h4>
+          <p>تطبيق طلاءات وأرضيات الإيبوكسي للمستودعات، المصانع، المرائب والمناطق الصناعية مع ضمان متانة عالية ومقاومة للمواد الكيميائية والأحمال الثقيلة.</p>
+          <div class="service-tags">
+            <span>أرضيات</span><span>طلاء</span><span>مقاوم</span>
+          </div>
+          <a href="#contact" class="service-link">اطلب الخدمة <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-card service-cta-card" data-service="6">
+          <div class="cta-card-inner">
+            <i class="fas fa-headset cta-icon"></i>
+            <h4>هل تحتاج استشارة؟</h4>
+            <p>فريقنا جاهز لمساعدتك وتقييم احتياجاتك مجاناً</p>
+            <a href="https://wa.me/966500000000" class="btn btn-wa-cta" target="_blank">
+              <i class="fab fa-whatsapp"></i> تواصل الآن
+            </a>
+            <a href="tel:+966500000000" class="btn btn-phone-cta mt-2">
+              <i class="fas fa-phone-alt"></i> اتصل بنا
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY US ===================== -->
+<section id="why-us" class="why-section section-pad">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="section-label justify-content-center">
+        <span class="label-line"></span><span>لماذا نحن</span><span class="label-line"></span>
+      </div>
+      <h2 class="section-title">ما يميز <span>مدارات التشييد</span></h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-microscope"></i></div>
+          <h5>تخصص دقيق</h5>
+          <p>متخصصون بشكل حصري في العزل والتسربات – لسنا شركة مقاولات عامة</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-satellite-dish"></i></div>
+          <h5>أحدث التقنيات</h5>
+          <p>نستخدم أجهزة كشف حرارية وتقنيات متطورة لأدق النتائج</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-certificate"></i></div>
+          <h5>ضمان معتمد</h5>
+          <p>جميع أعمالنا مضمونة بعقود رسمية وضمانات موثقة لراحة البال</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-clock"></i></div>
+          <h5>استجابة سريعة</h5>
+          <p>نصل إليك خلال ساعات للحالات الطارئة – لأن وقتك ثمين</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-users-cog"></i></div>
+          <h5>فريق متخصص</h5>
+          <p>كوادر فنية مؤهلة ومدربة على أعلى مستوى من الاحترافية</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-tags"></i></div>
+          <h5>أسعار تنافسية</h5>
+          <p>جودة عالمية بأسعار منافسة مع شفافية تامة في التسعير</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-leaf"></i></div>
+          <h5>مواد صديقة</h5>
+          <p>نستخدم مواد آمنة صديقة للبيئة معتمدة دولياً لصحتك وسلامة أسرتك</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-handshake"></i></div>
+          <h5>ثقة ومصداقية</h5>
+          <p>أكثر من 500 عميل راضٍ يثق في خدماتنا منذ أكثر من 15 عاماً</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section id="projects" class="projects-section section-pad">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="section-label justify-content-center">
+        <span class="label-line"></span><span>أعمالنا</span><span class="label-line"></span>
+      </div>
+      <h2 class="section-title">مشاريع <span>منفذة</span> بجودة عالية</h2>
+      <p class="section-subtitle">قبل وبعد – نتائج حقيقية تتحدث عن نفسها</p>
+    </div>
+    <div class="projects-filter mb-4 text-center" data-aos="fade-up">
+      <button class="filter-btn active" data-filter="all">الكل</button>
+      <button class="filter-btn" data-filter="waterproof">عزل مائي</button>
+      <button class="filter-btn" data-filter="leak">تسربات</button>
+      <button class="filter-btn" data-filter="epoxy">إيبوكسي</button>
+      <button class="filter-btn" data-filter="maintain">صيانة</button>
+    </div>
+    <div class="row g-4" id="projectsGrid">
+
+      <div class="col-lg-4 col-md-6 project-item" data-cat="waterproof" data-aos="fade-up" data-aos-delay="100">
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <div class="project-img-placeholder">
+              <i class="fas fa-home"></i>
+              <span>فيلا سكنية – عزل السطح</span>
+            </div>
+            <div class="project-overlay">
+              <div class="project-tag">عزل مائي</div>
+              <a href="#" class="project-zoom" onclick="openModal(this)"><i class="fas fa-expand"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h5>عزل سطح فيلا سكنية</h5>
+            <p>الرياض – حي النرجس</p>
+            <div class="before-after-toggle">
+              <span class="ba-label before active-ba">قبل</span>
+              <div class="ba-switch" onclick="toggleBA(this)"><span></span></div>
+              <span class="ba-label after">بعد</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 project-item" data-cat="leak" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <div class="project-img-placeholder">
+              <i class="fas fa-building"></i>
+              <span>مبنى تجاري – كشف تسرب</span>
+            </div>
+            <div class="project-overlay">
+              <div class="project-tag">كشف تسربات</div>
+              <a href="#" class="project-zoom" onclick="openModal(this)"><i class="fas fa-expand"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h5>كشف تسرب مبنى تجاري</h5>
+            <p>جدة – طريق الملك</p>
+            <div class="before-after-toggle">
+              <span class="ba-label before active-ba">قبل</span>
+              <div class="ba-switch" onclick="toggleBA(this)"><span></span></div>
+              <span class="ba-label after">بعد</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 project-item" data-cat="epoxy" data-aos="fade-up" data-aos-delay="300">
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <div class="project-img-placeholder">
+              <i class="fas fa-industry"></i>
+              <span>مستودع صناعي – أرضية إيبوكسي</span>
+            </div>
+            <div class="project-overlay">
+              <div class="project-tag">إيبوكسي</div>
+              <a href="#" class="project-zoom" onclick="openModal(this)"><i class="fas fa-expand"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h5>أرضية إيبوكسي مستودع</h5>
+            <p>الدمام – المنطقة الصناعية</p>
+            <div class="before-after-toggle">
+              <span class="ba-label before active-ba">قبل</span>
+              <div class="ba-switch" onclick="toggleBA(this)"><span></span></div>
+              <span class="ba-label after">بعد</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 project-item" data-cat="waterproof" data-aos="fade-up" data-aos-delay="100">
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <div class="project-img-placeholder">
+              <i class="fas fa-tint"></i>
+              <span>خزان مياه – عزل داخلي</span>
+            </div>
+            <div class="project-overlay">
+              <div class="project-tag">عزل خزانات</div>
+              <a href="#" class="project-zoom" onclick="openModal(this)"><i class="fas fa-expand"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h5>عزل خزان مياه علوي</h5>
+            <p>الرياض – حي العليا</p>
+            <div class="before-after-toggle">
+              <span class="ba-label before active-ba">قبل</span>
+              <div class="ba-switch" onclick="toggleBA(this)"><span></span></div>
+              <span class="ba-label after">بعد</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 project-item" data-cat="maintain" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <div class="project-img-placeholder">
+              <i class="fas fa-cogs"></i>
+              <span>مجمع سكني – صيانة دورية</span>
+            </div>
+            <div class="project-overlay">
+              <div class="project-tag">صيانة</div>
+              <a href="#" class="project-zoom" onclick="openModal(this)"><i class="fas fa-expand"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h5>صيانة مجمع سكني متكامل</h5>
+            <p>جدة – حي الروضة</p>
+            <div class="before-after-toggle">
+              <span class="ba-label before active-ba">قبل</span>
+              <div class="ba-switch" onclick="toggleBA(this)"><span></span></div>
+              <span class="ba-label after">بعد</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 project-item" data-cat="leak" data-aos="fade-up" data-aos-delay="300">
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <div class="project-img-placeholder">
+              <i class="fas fa-hospital"></i>
+              <span>مستشفى – معالجة تسربات</span>
+            </div>
+            <div class="project-overlay">
+              <div class="project-tag">معالجة تسربات</div>
+              <a href="#" class="project-zoom" onclick="openModal(this)"><i class="fas fa-expand"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h5>معالجة تسربات مستشفى</h5>
+            <p>الرياض – المنطقة الغربية</p>
+            <div class="before-after-toggle">
+              <span class="ba-label before active-ba">قبل</span>
+              <div class="ba-switch" onclick="toggleBA(this)"><span></span></div>
+              <span class="ba-label after">بعد</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== NEW SECTION: BLOG / ARTICLES ===================== -->
+<section id="blog" class="blog-section section-pad">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="section-label justify-content-center">
+        <span class="label-line"></span><span>المقالات</span><span class="label-line"></span>
+      </div>
+      <h2 class="section-title">أحدث <span>المقالات والنصائح</span></h2>
+      <p class="section-subtitle">نشاركك خبرتنا في مجال البناء والعزل لحماية ممتلكاتك</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Article 1 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="article-card">
+          <div class="article-img">
+            <i class="fas fa-sun"></i>
+            <div class="article-date-badge">15 مايو 2024</div>
+          </div>
+          <div class="article-body">
+            <div class="article-category">عزل حراري</div>
+            <h4 class="article-title">أهمية العزل الحراري في المباني السكنية بالمملكة</h4>
+            <p class="article-excerpt">
+              في ظل الارتفاع المستمر في درجات الحرارة خلال أشهر الصيف في المملكة العربية السعودية، أصبح العزل الحراري للمباني السكنية ليس مجرد رفاهية، بل ضرورة حتمية. يساهم العزل الحراري بشكل مباشر في تقليل استهلاك الطاقة الكهربائية بنسبة تصل إلى 40%، مما يعكس إيجابياً على فواتير الكهرباء ويقلل من الأحمال على الشبكة الوطنية.
+              <br><br>
+              علاوة على ذلك، يلعب العزل الحراري دوراً محورياً في تحسين جودة الحياة داخل المنازل، حيث يحافظ على درجة حرارة معتدلة ومريحة طوال العام، بعيداً عن حرارة الشمس الحارقة وبرودة الشتاء القارسة. كما أن المواد العازلة الحديثة التي نستخدمها في مدارات التشييد تتميز بقدرتها على مقاومة الرطوبة ومنع تكون العفن والبكتيريا، مما يعزز من صحة وسلامة قاطني المنزل. الاستثمار في العزل الحراري من اليوم هو خطوة ذكية تضمن راحة مالية وصحية طويلة الأمد.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 2 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="article-card">
+          <div class="article-img">
+            <i class="fas fa-tools"></i>
+            <div class="article-date-badge">10 أبريل 2024</div>
+          </div>
+          <div class="article-body">
+            <div class="article-category">عن الموقع</div>
+            <h4 class="article-title">مدارات التشييد: الشريك الاستراتيجي لمتانة منشآتك</h4>
+            <p class="article-excerpt">
+              يُعرف موقع "مدارات التشييد" بأنه المنصة الرائدة في تقديم الحلول الهندسية المتكاملة لمشاكل البناء، وتحديداً في مجال العزل ومعالجة التسربات. نحن لا نقدم مجرد خدمات، بل نحن نقدم "السلامة والأمان" لممتلكاتك.
+              <br><br>
+              يتميز موقعنا وشركتنا بالتركيز الشديد على التفاصيل الدقيقة، حيث نستخدم أحدث أجهزة الكشف الحراري لتحديد أدق مواضع الخلل دون الحاجة للتدمير، مما يوفر التكاليف على العملاء. إن فريقنا الهندسي متخصص على مدار الساعة لتقديم الدعم الفني، ونحن نفخر بإنجازنا في تنفيذ أكثر من 800 مشروع متنوع في مختلف مدن المملكة. عندما تتعامل مع مدارات التشييد، أنت تتعامل مع الجودة، المصداقية، والضمان الحقيقي الذي يستمر لسنوات طويلة.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 3 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="article-card">
+          <div class="article-img">
+            <i class="fas fa-search"></i>
+            <div class="article-date-badge">02 مارس 2024</div>
+          </div>
+          <div class="article-body">
+            <div class="article-category">تسربات المياه</div>
+            <h4 class="article-title">كيف تحمي منزلك من مخاطر تسربات المياه الخفية؟</h4>
+            <p class="article-excerpt">
+              تسربات المياه تعتبر "العدو الصامت" الذي يهدد سلامة المنازل. قد تبدأ بقطة صغيرة من الرطوبة على السقف أو الحائط، لكنها مع الوقت تؤدي إلى تشقق الخرسانة وتآكل الحديد، مما يهدد هيكل المبنى بالكامل.
+              <br><br>
+              في مدارات التشييد، نؤمن دائماً بأن "الكشف المبكر هو الحل الأنجع". لذلك ننصح بإجراء فحص دوري للأسطح والخزانات والحمامات مرة كل ستة أشهر على الأقل. نستخدم في موقعنا أجهزة دقيقة لا تتطلب تكسير الجدران، مما يتيح لنا تشخيص المشكلة في مهدها قبل أن تتفاقم. تذكر أن تكلفة الإصلاح المبكر تظل بسيطة جداً مقارنة بتكلفة الترميمات الكبيرة التي قد تنتج عن إهمال التسربات لفترات طويلة. احم منزلك اليوم قبل فوات الأوان.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STATS ===================== -->
+<section class="stats-section" id="stats">
+  <div class="stats-overlay"></div>
+  <div class="container position-relative">
+    <div class="row text-center">
+      <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+          <div class="stat-num" data-target="850">0</div><span class="stat-plus">+</span>
+          <div class="stat-label">مشروع منجز</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-users"></i></div>
+          <div class="stat-num" data-target="500">0</div><span class="stat-plus">+</span>
+          <div class="stat-label">عميل راضٍ</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+          <div class="stat-num" data-target="15">0</div><span class="stat-plus">+</span>
+          <div class="stat-label">سنة خبرة</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="stat-num" data-target="12">0</div><span class="stat-plus">+</span>
+          <div class="stat-label">مدينة</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONIALS ===================== -->
+<section id="testimonials" class="testimonials-section section-pad">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="section-label justify-content-center">
+        <span class="label-line"></span><span>آراء العملاء</span><span class="label-line"></span>
+      </div>
+      <h2 class="section-title">ماذا يقول <span>عملاؤنا</span>؟</h2>
+    </div>
+    <div class="testimonials-slider" id="testimonialsSlider">
+      <div class="testimonials-track" id="testimonialsTrack">
+
+        <div class="testimonial-card">
+          <div class="testi-quote"><i class="fas fa-quote-right"></i></div>
+          <div class="testi-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>"تعاملت مع مدارات التشييد لحل مشكلة تسرب مزمنة في فيلتي، والنتيجة كانت رائعة. الفريق محترف جداً والعمل نظيف ومرتب. أنصح بهم بشدة."</p>
+          <div class="testi-author">
+            <div class="author-avatar"><i class="fas fa-user-tie"></i></div>
+            <div>
+              <strong>م. أحمد الشمري</strong>
+              <span>مالك فيلا – الرياض</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testi-quote"><i class="fas fa-quote-right"></i></div>
+          <div class="testi-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>"شركة محترفة ومتخصصة، حلوا مشكلة تسرب كنا نعاني منها منذ سنوات في المجمع التجاري خلال يومين فقط. الأسعار معقولة والجودة ممتازة."</p>
+          <div class="testi-author">
+            <div class="author-avatar"><i class="fas fa-user-tie"></i></div>
+            <div>
+              <strong>المهندس خالد الراشد</strong>
+              <span>مدير عقارات – جدة</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testi-quote"><i class="fas fa-quote-right"></i></div>
+          <div class="testi-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>"عملنا معهم على مشروع أرضيات إيبوكسي لمستودعاتنا الصناعية والنتيجة تجاوزت توقعاتنا. التزموا بالمواعيد وقدموا ضماناً على العمل."</p>
+          <div class="testi-author">
+            <div class="author-avatar"><i class="fas fa-user-tie"></i></div>
+            <div>
+              <strong>فيصل المطيري</strong>
+              <span>مدير مصنع – الدمام</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testi-quote"><i class="fas fa-quote-right"></i></div>
+          <div class="testi-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+          </div>
+          <p>"استدعيتهم لكشف تسرب في خزان المياه، وصلوا خلال ساعات وحددوا المشكلة بدقة دون أي تكسير. خدمة احترافية من البداية للنهاية."</p>
+          <div class="testi-author">
+            <div class="author-avatar"><i class="fas fa-user-tie"></i></div>
+            <div>
+              <strong>سارة القحطاني</strong>
+              <span>مالكة مبنى – الرياض</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="slider-controls">
+        <button class="slider-btn" id="prevBtn"><i class="fas fa-chevron-right"></i></button>
+        <div class="slider-dots" id="sliderDots"></div>
+        <button class="slider-btn" id="nextBtn"><i class="fas fa-chevron-left"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="contact-section section-pad">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="section-label justify-content-center">
+        <span class="label-line"></span><span>تواصل معنا</span><span class="label-line"></span>
+      </div>
+      <h2 class="section-title">نحن هنا <span>لخدمتك</span></h2>
+      <p class="section-subtitle">تواصل معنا الآن للحصول على استشارة مجانية وعرض سعر</p>
+    </div>
+    <div class="row g-5">
+      <div class="col-lg-5" data-aos="fade-right">
+        <div class="contact-info-card">
+          <div class="contact-info-item">
+            <div class="d-flex align-items-start gap-3">
+              <div class="ci-icon"><i class="fas fa-phone-alt"></i></div>
+              <div>
+                <h6>الهاتف</h6>
+                <a href="tel:+966500000000">+966 50 000 0000</a><br>
+                <a href="tel:+966500000001">+966 50 000 0001</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="d-flex align-items-start gap-3">
+              <div class="ci-icon whatsapp"><i class="fab fa-whatsapp"></i></div>
+              <div>
+                <h6>واتساب</h6>
+                <a href="https://wa.me/966500000000" target="_blank">+966 50 000 0000</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="d-flex align-items-start gap-3">
+              <div class="ci-icon email"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h6>البريد الإلكتروني</h6>
+                <a href="mailto:info@madarat-tashyeed.com">info@madarat-tashyeed.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="d-flex align-items-start gap-3">
+              <div class="ci-icon location"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <h6>موقعنا</h6>
+                <span>الرياض، المملكة العربية السعودية</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-hours mt-3">
+            <div class="ci-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h6>ساعات العمل</h6>
+              <span>السبت – الخميس: 8 صباحاً – 8 مساءً</span><br>
+              <span class="emergency-badge"><i class="fas fa-bolt"></i> خدمة طوارئ 24/7</span>
+            </div>
+          </div>
+        </div>
+        <!-- Google Map Embed -->
+        <div class="map-wrap mt-4" data-aos="fade-up">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.6578296879!2d46.6752!3d24.6877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQxJzE1LjciTiA0NsKwNDAnMzAuNyJF!5e0!3m2!1sar!2ssa!4v1234567890"
+            width="100%" height="220" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+      <div class="col-lg-7" data-aos="fade-left">
+        <div class="contact-form-card">
+          <h4>أرسل لنا رسالة</h4>
+          <form id="contactForm" onsubmit="submitForm(event)">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-group-custom">
+                  <label>الاسم الكامل <span class="required">*</span></label>
+                  <input type="text" class="form-control" placeholder="أدخل اسمك" required>
+                  <div class="input-line"></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group-custom">
+                  <label>رقم الجوال <span class="required">*</span></label>
+                  <input type="tel" class="form-control" placeholder="+966 5X XXX XXXX" required>
+                  <div class="input-line"></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group-custom">
+                  <label>البريد الإلكتروني</label>
+                  <input type="email" class="form-control" placeholder="example@email.com">
+                  <div class="input-line"></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group-custom">
+                  <label>نوع الخدمة <span class="required">*</span></label>
+                  <select class="form-control" required>
+                    <option value="">اختر الخدمة</option>
+                    <option>العزل المائي</option>
+                    <option>كشف التسربات</option>
+                    <option>معالجة التسربات</option>
+                    <option>الصيانة</option>
+                    <option>أعمال الإيبوكسي</option>
+                    <option>أخرى</option>
+                  </select>
+                  <div class="input-line"></div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group-custom">
+                  <label>المدينة / الموقع <span class="required">*</span></label>
+                  <input type="text" class="form-control" placeholder="المدينة أو حي الموقع" required>
+                  <div class="input-line"></div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group-custom">
+                  <label>تفاصيل الطلب <span class="required">*</span></label>
+                  <textarea class="form-control" rows="4" placeholder="اشرح لنا مشكلتك أو ما تحتاجه..." required></textarea>
+                  <div class="input-line"></div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary-custom w-100">
+                  <i class="fas fa-paper-plane"></i> إرسال الطلب
+                </button>
+                <a href="https://wa.me/966500000000" class="btn btn-wa-full w-100 mt-2" target="_blank">
+                  <i class="fab fa-whatsapp"></i> أو تواصل عبر واتساب مباشرة
+                </a>
+              </div>
+            </div>
+          </form>
+          <div id="formSuccess" class="form-success d-none">
+            <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+            <h5>تم إرسال طلبك بنجاح!</h5>
+            <p>سيتواصل معك فريقنا خلال أقل من ساعة</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Column 1: About -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand d-flex align-items-center gap-2 mb-3">
+            <div class="brand-icon"><i class="fas fa-drafting-compass"></i></div>
+            <div>
+              <div class="brand-ar">مدارات التشييد</div>
+              <div class="brand-en" style="font-size:0.75rem;opacity:0.7">Madarat Al Tashyeed Construction</div>
+            </div>
+          </div>
+          <p class="footer-about">
+            شركة متخصصة في العزل المائي، كشف ومعالجة التسربات، أعمال الإيبوكسي والصيانة المتكاملة. 
+            نعمل بخبرة أكثر من 15 عاماً لتقديم حلول مستدامة وعالية الجودة بضمان معتمد.
+          </p>
+          <div class="footer-certif mt-3">
+            <div class="cert-badge"><i class="fas fa-shield-alt"></i> جودة معتمدة</div>
+            <div class="cert-badge"><i class="fas fa-award"></i> ضمان موثق</div>
+          </div>
+        </div>
+        <!-- Column 2: Quick Links -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">روابط سريعة</h5>
+          <ul class="footer-links">
+            <li><a href="#home"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
+            <li><a href="#services"><i class="fas fa-chevron-left"></i> خدماتنا</a></li>
+            <li><a href="#projects"><i class="fas fa-chevron-left"></i> أعمالنا</a></li>
+            <li><a href="#blog"><i class="fas fa-chevron-left"></i> المقالات</a></li>
+            <li><a href="#contact"><i class="fas fa-chevron-left"></i> تواصل معنا</a></li>
+          </ul>
+        </div>
+        <!-- Column 3: Contact Info -->
+        <div class="col-lg-5 col-md-12">
+          <h5 class="footer-title">معلومات التواصل</h5>
+          <div class="footer-contacts">
+            <div class="fc-item">
+              <i class="fas fa-phone-alt"></i>
+              <div>
+                <strong>الهاتف</strong>
+                <a href="tel:+966500000000">+966 50 000 0000</a>
+                <a href="tel:+966500000001">+966 50 000 0001</a>
+              </div>
+            </div>
+            <div class="fc-item">
+              <i class="fab fa-whatsapp"></i>
+              <div>
+                <strong>واتساب</strong>
+                <a href="https://wa.me/966500000000" target="_blank">+966 50 000 0000</a>
+              </div>
+            </div>
+            <div class="fc-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <strong>البريد الإلكتروني</strong>
+                <a href="mailto:info@madarat-tashyeed.com">info@madarat-tashyeed.com</a>
+              </div>
+            </div>
+            <div class="fc-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <strong>الموقع</strong>
+                <span>الرياض، المملكة العربية السعودية</span>
+              </div>
+            </div>
+            <div class="fc-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <strong>ساعات العمل</strong>
+                <span>السبت – الخميس: 8 ص – 8 م</span>
+                <span class="emergency-badge mt-1"><i class="fas fa-bolt"></i> طوارئ 24/7</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+      <p class="mb-0">© 2025 مدارات التشييد – جميع الحقوق محفوظة</p>
+      <p class="mb-0">جودة عالية – تنفيذ دقيق – ضمان</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Fixed Button -->
+<a href="https://wa.me/966500000000" class="wa-fixed-btn" target="_blank" id="waBtn">
+  <i class="fab fa-whatsapp"></i>
+  <div class="wa-tooltip">تواصل عبر واتساب</div>
+</a>
+
+<!-- Phone Fixed Button -->
+<a href="tel:+966500000000" class="phone-fixed-btn" id="phoneBtn">
+  <i class="fas fa-phone-alt"></i>
+</a>
+
+<!-- Scroll to Top -->
+<button class="scroll-top-btn" id="scrollTopBtn" onclick="scrollToTop()">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- Project Modal -->
+<div class="project-modal-overlay" id="projectModal" onclick="closeModal()">
+  <div class="project-modal-content" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+    <div class="modal-img-placeholder"><i class="fas fa-image"></i><span>صورة المشروع</span></div>
+    <div class="modal-info">
+      <h4>تفاصيل المشروع</h4>
+      <p>يمكنك إضافة صور المشروع الحقيقية هنا مع وصف تفصيلي للعمل المنجز.</p>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
