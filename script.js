@@ -136,35 +136,117 @@
     }, 16);
   }
 
-  // ── PROJECTS FILTER ─────────────────────────────────────────────
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', function () {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
+  const projectsData = [
+  { category: "waterproof", tag: "عزل مائي", image: "./Styles/Photos/11.jpeg" },
+    { category: "waterproof", tag: "عزل مائي", image: "./Styles/Photos/12.jpeg" },
+  { category: "waterproof", tag: "عزل مائي", image: "./Styles/Photos/13.jpeg" },
+  { category: "waterproof", tag: "عزل مائي", image: "./Styles/Photos/14.jpeg" },
+  { category: "waterproof", tag: "عزل مائي", image: "./Styles/Photos/15.jpeg" },
+  { category: "plumbing", tag: "السباكة", image: "./Styles/Photos/6.jpeg" },
+  { category: "plumbing", tag: "السباكة", image: "./Styles/Photos/7.jpeg" },
+  { category: "plumbing", tag: "السباكة", image: "./Styles/Photos/8.jpeg" },
+  { category: "plumbing", tag: "السباكة", image: "./Styles/Photos/9.jpeg" },
+  { category: "plumbing", tag: "السباكة", image: "./Styles/Photos/10.jpeg" },
+  { category: "epoxy", tag: "إيبوكسي", image: "./Styles/Photos/1.jpeg" },
+    { category: "epoxy", tag: "إيبوكسي", image: "./Styles/Photos/2.jpeg" },
+  { category: "epoxy", tag: "إيبوكسي", image: "./Styles/Photos/3.jpeg" },
+  { category: "epoxy", tag: "إيبوكسي", image: "./Styles/Photos/4.jpeg" },
+  { category: "epoxy", tag: "إيبوكسي", image: "./Styles/Photos/5.jpeg" },
+  { category: "leak", tag: "كشف التسربات والمعالجة", image: "./Styles/Photos/16.jpeg" },
+    { category: "leak", tag: "كشف التسربات والمعالجة", image: "./Styles/Photos/17.jpeg" },
+  { category: "leak", tag: "كشف التسربات والمعالجة", image: "./Styles/Photos/18.jpeg" },
+  { category: "leak", tag: "كشف التسربات والمعالجة", image: "./Styles/Photos/19.jpeg" },
+  { category: "leak", tag: "كشف التسربات والمعالجة", image: "./Styles/Photos/20.jpeg" },
+  { category: "leak", tag: "كشف التسربات والمعالجة", image: "./Styles/Photos/21.jpeg" },
+  { category: "leak", tag: "كشف التسربات والمعالجة", image: "./Styles/Photos/22.jpeg" }
 
-      const filter = this.dataset.filter;
-      document.querySelectorAll('.project-item').forEach(item => {
-        const show = filter === 'all' || item.dataset.cat === filter;
-        if (show) {
-          item.style.display = '';
-          item.style.opacity = '0';
-          item.style.transform = 'scale(0.9)';
-          requestAnimationFrame(() => {
-            setTimeout(() => {
-              item.style.transition = 'opacity 0.4s, transform 0.4s';
-              item.style.opacity    = '1';
-              item.style.transform  = 'scale(1)';
-            }, 50);
-          });
-        } else {
-          item.style.transition = 'opacity 0.3s';
-          item.style.opacity    = '0';
-          setTimeout(() => { item.style.display = 'none'; }, 300);
-        }
-      });
+];
+
+const projectsGrid = document.getElementById('projectsGrid');
+
+function renderProjects() {
+  let htmlContent = '';
+  projectsData.forEach((project, index) => {
+    const delay = (index % 3 + 1) * 100;
+    htmlContent += `
+      <div class="col-lg-4 col-md-6 project-item" data-cat="${project.category}" data-aos="fade-up" data-aos-delay="${delay}">
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <div class="project-img-placeholder">
+              <img src="${project.image}" alt="${project.tag}" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <div class="project-overlay">
+              <div class="project-tag">${project.tag}</div>
+              <a class="project-zoom" href="#" onclick="openModal(event, this)"><i class="fas fa-expand"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h5>${project.tag}</h5>
+          </div>
+        </div>
+      </div>
+    `;
+  });
+  projectsGrid.innerHTML = htmlContent;
+}
+
+document.addEventListener('DOMContentLoaded', renderProjects);
+
+// كود الفلترة (كما هو بدون تغيير)
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', function () {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    const filter = this.dataset.filter;
+    document.querySelectorAll('.project-item').forEach(item => {
+      const show = filter === 'all' || item.dataset.cat === filter;
+      if (show) {
+        item.style.display = '';
+        item.style.opacity = '0';
+        item.style.transform = 'scale(0.9)';
+        requestAnimationFrame(() => {
+          setTimeout(() => {
+            item.style.transition = 'opacity 0.4s, transform 0.4s';
+            item.style.opacity = '1';
+            item.style.transform = 'scale(1)';
+          }, 50);
+        });
+      } else {
+        item.style.transition = 'opacity 0.3s';
+        item.style.opacity = '0';
+        setTimeout(() => { item.style.display = 'none'; }, 300);
+      }
     });
   });
+});
 
+// اللوجيك المعدل للمودال
+function openModal(e, el) {
+  if(e) e.preventDefault(); // منع القفز لأعلى الصفحة
+
+  // الوصول للصورة بشكل أدق
+  const card = el.closest('.project-card');
+  const mainImage = card.querySelector('.project-img-placeholder img');
+  const modalImg = document.getElementById('modalImage');
+  const modal = document.getElementById('projectModal');
+
+  if (mainImage && modalImg) {
+    modalImg.src = mainImage.src;
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  } else {
+    console.error("لم يتم العثور على الصورة");
+  }
+}
+
+function closeModal() {
+  document.getElementById('projectModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
   // ── TESTIMONIALS SLIDER ─────────────────────────────────────────
   (function initSlider() {
     const track    = document.getElementById('testimonialsTrack');
@@ -237,21 +319,6 @@
     }
   }
 
-  // ── PROJECT MODAL ───────────────────────────────────────────────
-  function openModal(el) {
-    document.getElementById('projectModal').classList.add('open');
-    document.body.style.overflow = 'hidden';
-    return false;
-  }
-
-  function closeModal() {
-    document.getElementById('projectModal').classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeModal();
-  });
 
   // ── CONTACT FORM ─────────────────────────────────────────────────
   function submitForm(e) {
@@ -276,7 +343,7 @@
     const el = document.querySelector('.highlight-stroke');
     if (!el) return;
 
-    const words   = ['التسربات', 'الرطوبة', 'العزل', 'المشاكل'];
+    const words   = [ 'والسباكة الحديثة ', 'والتسربات', 'للعزل المائي'];
     let wordIdx   = 0;
     let charIdx   = 0;
     let deleting  = false;
